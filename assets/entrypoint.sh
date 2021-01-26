@@ -24,7 +24,7 @@ then
     sed -i "s|{{ TRACK_SCRIPT }}|\"$TRACK_SCRIPT\"|g" $CONFIG
     chmod +x $TRACK_SCRIPT
   else
-    sed -i "/{{ NOTIFY }}/d" $CONFIG
+    sed -i "/{{ TRACK_SCRIPT }}/d" $CONFIG
   fi
 
   for peer in $UNICAST_PEERS; do
