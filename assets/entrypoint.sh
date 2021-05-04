@@ -13,7 +13,7 @@ then
   sed -i "s|{{ PASSWORD }}|$PASSWORD|g" $CONFIG
 
   if [ "$USE_VMAC" = "true" ]; then
-    sed -i "s|{{ USE_VMAC }}|\use_vmac|g" $CONFIG
+    sed -i "s|{{ USE_VMAC }}|use_vmac|g" $CONFIG
   else
     sed -i "/{{ USE_VMAC }}/d" $CONFIG
   fi
