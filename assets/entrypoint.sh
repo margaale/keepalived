@@ -12,6 +12,11 @@ then
   sed -i "s|{{ PRIORITY }}|$PRIORITY|g" $CONFIG
   sed -i "s|{{ PASSWORD }}|$PASSWORD|g" $CONFIG
 
+  if [ "$USE_VMAC" = "true" ]; then
+    sed -i "s|{{ USE_VMAC }}|\use_vmac|g" $CONFIG
+  else
+    sed -i "/{{ USE_VMAC }}/d" $CONFIG
+  fi
 
   if [ -n "$NOTIFY" ]; then
     sed -i "s|{{ NOTIFY }}|\"$NOTIFY\"|g" $CONFIG
