@@ -49,5 +49,6 @@ ENV UNICAST_PEERS="192.168.2.101 192.168.2.102 192.168.2.103"
 ENV VIRTUAL_IPS="192.168.2.100/24"
 ENV PASSWORD="KeptAliv"
 ENV NOTIFY="/notify.sh"
+ENV USE_VMAC="false"
 
 CMD ["bash", "-x", "entrypoint.sh"]
