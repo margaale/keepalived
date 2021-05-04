@@ -24,7 +24,7 @@ jobs:
       - name: Prepare image name
         run: |
           echo "DOCKER_IMAGE=$GITHUB_REPOSITORY:1.$GITHUB_RUN_NUMBER" >> $GITHUB_ENV;
-          echo "IMAGE_NAME=$GITHUB_REPOSITORY >> GITHUB_ENV"
+          echo "IMAGE_NAME=$GITHUB_REPOSITORY >> $GITHUB_ENV"
       
       - name: Build and push
         uses: docker/build-push-action@v2
