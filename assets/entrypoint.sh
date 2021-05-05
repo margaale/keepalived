@@ -14,6 +14,7 @@ then
 
   if [ "$USE_VMAC" = "true" ]; then
     sed -i "s|{{ USE_VMAC }}|use_vmac|g" $CONFIG
+    sed -i "s|{{ VMAC_XMIT_BASE }}|vmac_xmit_base|g" $CONFIG
   else
     sed -i "/{{ USE_VMAC }}/d" $CONFIG
   fi
