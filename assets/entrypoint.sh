@@ -17,6 +17,7 @@ then
     sed -i "s|{{ VMAC_XMIT_BASE }}|vmac_xmit_base|g" $CONFIG
   else
     sed -i "/{{ USE_VMAC }}/d" $CONFIG
+    sed -i "/{{ VMAC_XMIT_BASE }}/d" $CONFIG
   fi
 
   if [ -n "$NOTIFY" ]; then
